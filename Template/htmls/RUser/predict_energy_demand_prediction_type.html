@@ -1,0 +1,160 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF ENERGY DEMAND TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1023" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style4">ENTER DATA SET DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Fid</span></div></td>
+                                    <td><input type="text" name="Fid"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Station_Name</span></div></td>
+                                    <td><input type="text" name="Station_Name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Start_Date</span></div></td>
+                                    <td><input type="text" name="Start_Date"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter </strong></span><span class="style4">End_Date</span></div></td>
+                                    <td><input type="text" name="End_Date"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Total_Duration_hh_mm_ss</span></div></td>
+                                    <td><input type="text" name="Total_Duration_hh_mm_ss"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Charging_Time_hh_mm_ss</span></div></td>
+                                    <td><input type="text" name="Charging_Time_hh_mm_ss"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Energy_kWh</span></div></td>
+                                    <td><input type="text" name="Energy_kWh"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Port_Number</span></div></td>
+                                    <td><input type="text" name="Port_Number"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Plug_Type</span></div></td>
+                                    <td><input type="text" name="Plug_Type"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter Address</strong></span></div></td>
+                                    <td><input type="text" name="Address1"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">City</span></div></td>
+                                    <td><input type="text" name="City"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">State_Province</span></div></td>
+                                    <td><input type="text" name="State_Province"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span><span class="style4"> Country</span></div></td>
+                                    <td><input type="text" name="Country"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Latitude</span></div></td>
+                                    <td><input type="text" name="Latitude"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style4 style2">Enter Longitude</span></div></td>
+                                    <td><input type="text" name="Longitude"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Fee_USD</div></td>
+                                    <td><input type="text" name="Fee_USD"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Ended_By</div></td>
+                                    <td><input type="text" name="Ended_By"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter Make</div></td>
+                                    <td><input type="text" name="Make"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style4">Enter Model</span></div></td>
+                                    <td><input type="text" name="Model"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style4">Enter Vehicle_Type</span></div></td>
+                                    <td><select name="Vehicle_Type">
+                                      <option>---Select---</option>
+                                      <option>Car</option>
+                                      
+                                    </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td width="209">&nbsp;</td>
+                                    <td width="331"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="174">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="758" height="75" border="0" align="center" >
+                                    <tr><td width="464" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTED ENERGY DEMAND TYPE </span></div></td>
+
+                                      <td width="207" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+                            </div>
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
